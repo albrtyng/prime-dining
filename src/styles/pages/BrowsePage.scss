@@ -1,0 +1,74 @@
+@import '../partials/constants';
+@import '../partials/mixins';
+
+.browse {
+  overflow-x: hidden;
+  margin-top: 11.5625rem;
+
+  &__carousel {
+    width: 100%;
+    height: 143px;
+    background-size: cover;
+    background-image: linear-gradient(
+      rgba(50, 50, 50, 0.5),
+      rgba(50, 50, 50, 0.5)
+    ), url('../../assets/images/carousel.png');
+    background-repeat: no-repeat;
+    margin-bottom: 1.5rem;
+    padding: 3.5rem 1rem .5rem;
+  }
+
+  &__description {
+    @include font(1.5rem, 1.25rem, 400, white);
+    width: 85%;
+  }
+
+  &__learn {
+    @include font(1.25rem, 1rem, 400, white);
+  }
+
+  &__sliders {
+    padding: 0 1.5rem;
+  }
+
+  &__subheading {
+    @include font(1.5rem, 1.25rem, 600, black);
+    margin: 0 0 0.6875rem;
+  }
+
+  &__cuisines, &__larger-imgs {
+    @include flex();
+    margin: 0 0 1rem;
+  }
+
+  &__cuisine {
+    width: 5.375rem;
+    height: 8.6875rem;
+    object-fit: cover;
+    margin-right: 1.25rem;
+    border-radius: 0.625rem;
+  }
+
+  &__larger-img {
+    width: 18.625rem;
+    height: 8.6875rem;
+    margin-right: 1.25rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+  }
+
+  &__show-container {
+    @include flex($jc: center);
+    width: 100%;
+  }
+
+  &__show {
+    @include font(1.375rem, 1.5rem, 400, #D3B205);
+    background-color: #343434;
+    width: 14.875rem;
+    height: 4.375rem;
+    border: none;
+    margin-top: 2.1875rem;
+    margin-bottom: 4.375rem;
+  }
+}

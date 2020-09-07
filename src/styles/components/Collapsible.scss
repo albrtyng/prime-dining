@@ -1,0 +1,25 @@
+@import '../partials/constants';
+@import '../partials/mixins';
+
+.collapsible {
+  margin-bottom: 1rem;
+
+  &__name {
+    @include font(1.375rem, 1rem, 400, #D3B205, 0 0 0 .5rem, 75%);
+  }
+
+  &__selected {
+    @include font(1.375rem, 1rem, 400, #D3B205, 0 0 0 2.75rem);
+    width: 100%;
+  }
+
+  &__toggle-container {
+    background: #343434;
+    border: none;
+  }
+
+  &__toggle {
+    @include flex($fw: wrap, $jc: space-between);
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+}

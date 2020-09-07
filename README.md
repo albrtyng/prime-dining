@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Prime Dining
+
+The fine dining experience right at home
+
+## Technology
+
+Hooks, Bootstrap, Framer-motion
 
 ## Available Scripts
 

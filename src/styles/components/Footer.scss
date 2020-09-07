@@ -1,0 +1,45 @@
+@import '../partials/constants';
+@import '../partials/mixins';
+
+.footer {
+  width: 100%;
+  padding: 0 1.5rem;
+
+  &__top {
+    @include flex($ai: center, $jc: space-between);
+    width: 100%;
+  }
+
+  &__logo {
+    object-fit: cover;
+    width: 4.9375rem;
+    height: 5.375rem;
+  }
+
+  &__btn {
+    @include font(1rem, 0.875rem, 400, #D3B205);
+    width: 6.6875rem;
+    height: 2.75rem;
+    background-color: #343434;
+    border: none;
+  }
+
+  &__bolds {
+    margin: 1rem 0 2rem;
+  }
+
+  &__bold {
+    @include font(1rem, 0.85rem, 600, black);
+    margin-bottom: 0.8125rem;
+  }
+  
+  &__text {
+    @include font(1rem, 0.85rem, 400, black);
+    margin-bottom: 0.5rem;
+  }
+
+  &__copyright {
+    @include font(1rem, 0.875rem, 600);
+    text-align: center;
+  }
+}

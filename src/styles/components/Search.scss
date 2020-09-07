@@ -1,0 +1,30 @@
+@import '../partials/constants.scss';
+@import '../partials/mixins.scss';
+
+.search {
+  &__container {
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  &__deliver {
+    @include font(1.5rem, 0.85rem, 400, black);
+  }
+
+  &__address {
+    @include font(1.5rem, 0.85rem, 600, black, 0 0 0.5rem);
+  }
+
+  &__input {
+    background-color: #DBDBDB;
+    border: none;
+    outline: none;
+    height: 2.25rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-radius: 0.625rem;
+  }
+}

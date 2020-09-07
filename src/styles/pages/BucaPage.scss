@@ -1,0 +1,80 @@
+@import '../partials/constants';
+@import '../partials/mixins';
+
+@import '~bootstrap/scss/bootstrap';
+
+.buca {
+  margin-top: 11.5625rem;
+
+  &__img {
+    width: 100%;
+    height: 8.6875rem;
+    object-fit: cover;
+  }
+
+  &__details {
+    @include flex($fw: wrap, $bx: border-box);
+    width: 100%;
+    padding: .5rem 1.5rem 0;
+  }
+
+  &__title {
+    @include font(2.0625rem, 1.5rem, 700, black, 0, 3.4375rem);
+  }
+
+  &__contact {
+    @include flex($jc: space-between, $bx: border-box, $ai: center);
+    height: 2.625rem;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  &__text-l {
+    @include font(1.375rem, 1rem, 400, black, 0);
+    height: auto;
+    width: auto;
+  }
+
+  &__rating {
+    @include flex($ai: flex-start);
+    @include font(1.5rem, 0.85rem, 400, black);
+    width: 2.625rem;
+    margin: .25rem 0 0 1rem;
+  }
+
+  &__num-rate {
+    @include font(1.375rem, 0.625rem, 400, black);
+    margin-left: 0.125rem;
+  }
+
+  &__timing {
+    @include font(1.5rem, 0.85rem, 400, black, 0, 60px);
+    height: 1.375rem;
+    margin-left: 9.6rem;
+    margin-top: .5rem;
+  }
+
+  &__exp {
+    @include font(1.375rem, 0.75rem, 400, black, 0, 95px);
+    margin-bottom: 0.3125rem;
+  }
+
+  &__dropdowns {
+    padding: 1.5rem;
+  }
+
+  &__show-container {
+    @include flex($jc: center);
+    width: 100%;
+  }
+
+  &__show {
+    @include font(1.375rem, 1.5rem, 400, #D3B205);
+    background-color: #343434;
+    width: 14.875rem;
+    height: 4.375rem;
+    border: none;
+    margin-bottom: 4.375rem;
+  }
+}

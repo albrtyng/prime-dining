@@ -1,0 +1,78 @@
+@import '../partials/constants.scss';
+@import '../partials/mixins.scss';
+
+.italian {
+  padding: 0 1.5rem;
+  margin-top: 11.5625rem;
+
+  &__title {
+    @include font(2rem, 1.5rem, 600, black);
+  }
+
+  &__nearby {
+    @include font(1.5rem, 1rem, 400, black);
+  }
+
+  &__filter {
+    margin: 0.75rem 0 1.25rem;
+  }
+
+  &__restaurant {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.625rem;
+
+    & img:first-child {
+      width: 100%;
+      height: 139px;
+      object-fit: cover;
+      border-top-left-radius: 0.625rem;
+      border-top-right-radius: 0.625rem;
+    }
+  }
+
+  &__res-name {
+    @include font(1.5rem, 1rem, 600, black, 0 0 0.375rem, 70%);
+  }
+
+  &__deet-row {
+    @include flex($jc: space-between);
+    height: 1.4375rem;
+    width: 100%;
+  }
+
+  &__details {
+    height: 4.6875rem;
+    padding: .5rem;
+  }
+
+  &__rating {
+    @include font(1.5rem, .85rem, 400, black, 0, 50%);
+    height: 100%;
+    margin: 0;
+  }
+
+  &__text {
+    @include font(1.5rem, .85rem, 400, black, 0, 50%);
+    height: 100%;
+    margin: 0;
+    text-align: right;
+  }
+
+  &__show-container {
+    @include flex($jc: center);
+    width: 100%;
+  }
+
+  &__show {
+    @include font(1.375rem, 1.5rem, 400, #D3B205);
+    background-color: #343434;
+    width: 14.875rem;
+    height: 4.375rem;
+    border: none;
+    margin-top: 2.1875rem;
+    margin-bottom: 4.375rem;
+  }
+}

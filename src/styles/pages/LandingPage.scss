@@ -1,0 +1,57 @@
+@import '../partials/mixins';
+
+.landing {
+  @include flex($bx: border-box, $jc: center, $ai: center, $fw: wrap, $ac: flex-start);
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__title {
+    @include font(3.5rem, 3.5rem, 700, white);
+    text-align: center;
+    margin: 0;
+    font-family: 'Cormorant', serif;
+  }
+
+  &__subtitle {
+    @include font(2.5rem, 2.25rem, 400, white);
+    margin: 1rem 0 4rem;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+  }
+
+  &__shocker {
+    @include font(2.25rem, 2rem, 400, white);
+    margin: 1rem 0 1rem;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__arrow {
+    @include font(4rem, 4rem, 400, #D3B205);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &__overlay {
+    box-sizing: border-box;
+    padding: 8rem 2rem 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: #0f0f0f;
+  }
+
+  &__video {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0 -2rem 0;
+  }
+}

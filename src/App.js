@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Redirect, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
-function App() {
+import BrowsePage from './pages/BrowsePage';
+import ItalianPage from './pages/ItalianPage';
+import LandingPage from './pages/LandingPage';
+
+import './styles/App.scss';
+import TitleBar from './components/TitleBar';
+import BucaPage from './pages/BucaPage';
+import Footer from './components/Footer';
+
+const App = () => {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence className='app' exitBeforeEnter>
+      <Switch location={location} key={location.pathname}>
+        <Redirect exact from='/' to='/landing' />
+        <Route exact path='/landing' component={LandingPage} />
+        <Route path='/browse'>
+          <TitleBar />
+          <Switch>
+            <Route exact path='/browse' component={BrowsePage}/>
+            <Route exact path='/browse/italian' component={ItalianPage}/>
+            <Route exact path='/browse/buca' component={BucaPage}/>
+          </Switch>
+          <Footer />
+        </Route>
+      </Switch>
+    </AnimatePresence>
   );
 }
 
